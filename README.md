@@ -1,7 +1,7 @@
 ## About
 
-Created with [Astro](https://docs.astro.build) 🚀
-Hosted on [Cloudflare Pages](https://pages.cloudflare.com/) 📄
+### Created with [Astro](https://docs.astro.build) 🚀
+### Hosted on [Cloudflare Pages](https://pages.cloudflare.com/) 📄
 
 ---
 
