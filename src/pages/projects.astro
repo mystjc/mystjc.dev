@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/default.astro';
-const page = "Projects"
+import GitProjects from '../components/gitprojects.svelte';
 ---
-<Layout page={page}></Layout>
+<Layout title="Projects">
+  <GitProjects client:load/>
+</Layout>
