@@ -43,7 +43,7 @@
     <div class="bg-gray-500 rounded-md p-4 m-4">
       <a href={repo.url} target="_blank">
         <div class="flex items-center">
-          <img class="rounded-full w-6" src={repo.avatar.toString()} alt="">
+          <img class="rounded-full w-6" src={repo.avatar} alt="">
           <span class="pl-2">{repo.user} / <strong>{repo.name}</strong></span>
         </div>
         <span>{repo.desc}</span>
@@ -51,9 +51,9 @@
           {#if repo.lang != null}
             <span class="pr-2">{repo.lang}</span>
           {/if}
-          <img class="w-4" src="../../assets/icons/star.svg" alt="">
+          <img class="w-4" src="../../icons/star.svg" alt="">
           <span class="px-1">{repo.stars}</span>
-          <img class="w-4" src="../../assets/icons/repo-forked.svg" alt="">
+          <img class="w-4" src="../../icons/repo-forked.svg" alt="">
           <span class="pl-1">{repo.forks}</span>
         </div>
       </a>
