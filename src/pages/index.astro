@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/default.astro';
+import Greeter from '../components/greeter.svelte';
 import Socials from '../components/socials.svelte';
 ---
 <Layout title="Mystjc">
+  <Greeter client:load/>
   <Socials client:load/>
 </Layout>

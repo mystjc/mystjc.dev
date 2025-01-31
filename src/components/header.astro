@@ -1,12 +1,12 @@
 <header>
-  <nav class="flex justify-center space-x-2 my-5">
+  <nav class="flex justify-center space-x-2 my-4">
     {[
       ['Home', '/'],
       ['About', '/about/'],
       ['Projects', '/projects/'],
       ['Blog', '/blog/'],
     ].map(([title, url]) => (
-      <a class="hover:bg-gray-500 rounded-md px-3 py-1" href={url}>{title}</a>
+      <a class="hover:underline underline-offset-4 px-4 py-2" href={url}>{title}</a>
     ))}
   </nav>
 </header>

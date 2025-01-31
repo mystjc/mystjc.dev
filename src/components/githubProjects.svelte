@@ -39,24 +39,26 @@
 {#await getRepos()}
   <p>Loading repos...</p>
 {:then repos}
-  {#each repos as repo}
-    <div class="bg-gray-500 rounded-md p-4 m-4">
-      <a href={repo.url} target="_blank">
-        <div class="flex items-center">
-          <img class="rounded-full w-6" src={repo.avatar} alt="">
-          <span class="pl-2">{repo.user} / <strong>{repo.name}</strong></span>
-        </div>
-        <span>{repo.desc}</span>
-        <div class="flex items-center">
-          {#if repo.lang != null}
-            <span class="pr-2">{repo.lang}</span>
-          {/if}
-          <img class="w-4" src="../../icons/star.svg" alt="">
-          <span class="px-1">{repo.stars}</span>
-          <img class="w-4" src="../../icons/repo-forked.svg" alt="">
-          <span class="pl-1">{repo.forks}</span>
-        </div>
-      </a>
-    </div>
-  {/each}
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {#each repos as repo}
+      <div class="bg-gray-500 rounded-md p-4">
+        <a href={repo.url} target="_blank">
+          <div class="flex items-center">
+            <img class="rounded-full w-6" src={repo.avatar} alt="">
+            <span class="pl-2">{repo.user} / <strong>{repo.name}</strong></span>
+          </div>
+          <span>{repo.desc}</span>
+          <div class="flex items-center">
+            {#if repo.lang != null}
+              <span class="pr-2">{repo.lang}</span>
+            {/if}
+            <img class="w-4" src="../../icons/star.svg" alt="">
+            <span class="px-1">{repo.stars}</span>
+            <img class="w-4" src="../../icons/repo-forked.svg" alt="">
+            <span class="pl-1">{repo.forks}</span>
+          </div>
+        </a>
+      </div>
+    {/each}
+  </div>
 {/await}

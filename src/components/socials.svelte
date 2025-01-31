@@ -11,13 +11,15 @@
   ]);
 </script>
 
-{#each [...socials] as [key, value]}
-  <div class="bg-gray-500 rounded-md p-4 m-4">
-    <a href={value.url} target="_blank">
-      <div class="flex items-center">
-        <img class="w-4" src={value.svg} alt="">
-        <span class="pl-2">{key}</span>
-      </div>
-    </a>
-  </div>
-{/each}
+<div class="grid grid-cols-3 gap-4">
+  {#each [...socials] as [key, value]}
+    <div class="bg-gray-500 rounded-full p-4">
+      <a href={value.url} target="_blank">
+        <div class="flex items-center">
+          <img class="w-4" src={value.svg} alt="">
+          <span class="pl-2">{key}</span>
+        </div>
+      </a>
+    </div>
+  {/each}
+</div>

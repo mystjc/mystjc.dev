@@ -4,13 +4,13 @@ import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 const {title} = Astro.props;
 ---
-<html class="text-white bg-black mx-5" lang="en">
+<html class="text-white bg-black mx-4" lang="en">
 	<head>
 		<Meta {title}/>
 	</head>
 	<body class="h-screen flex flex-col">
 		<Header/>
-    <main class="max-w-4xl mx-auto flex-grow">
+    <main class="mx-auto sm:max-w-4xl xl:max-w-8xl flex-grow">
 			<slot/>
 		</main>
 		<Footer/>
